@@ -1,0 +1,243 @@
+/* Define local font */
+@font-face {
+    font-family: 'PhanterBlack';
+    src: url('/fonts/PhanterBlack-DO6Ed.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'ARCADECLASSIC';
+    src: url('/fonts/ARCADECLASSIC.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    font-family: 'ARCADECLASSIC', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f8f8;
+}
+
+.container {
+    text-align: center;
+    padding: 20px;
+}
+
+.header {
+    background-color: #fff;
+    padding: 20px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10px;
+}
+
+.header img {
+    height: 50px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #000;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #007BFF; /* Add your preferred hover color */
+}
+
+.content {
+    padding: 20px 0;
+}
+
+.content h1 {
+    font-family: 'PhanterBlack', sans-serif; /* Use local font for title */
+    font-size: 1000%;
+    padding-top: 40px;
+    margin: -30px;
+}
+
+.content p {
+    font-size: 1.2em;
+    color: #666;
+    margin: 10px 0;
+}
+
+.buttons {
+    margin: 20px 0;
+}
+
+.buttons a {
+    text-decoration: none;
+    padding: 10px 20px;
+    background-color: #000;
+    color: #fff;
+    border-radius: 5px;
+    margin: 0 10px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.buttons a:hover {
+    background-color: #333;
+    transform: scale(1.05);
+}
+
+.participate {
+    margin: 0;
+    padding: 40px 0;
+}
+
+.participate h2 {
+    font-family: 'PhanterBlack', sans-serif; /* Use local font for title */
+    font-size: 4em;
+}
+
+.games {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.games img {
+    height: 50px;
+    object-fit: contain;
+}
+
+.faq-container {
+    font-family: 'ARCADECLASSIC', sans-serif;
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.faq-container h2 {
+    margin-bottom: 20px;
+    font-family: 'PhanterBlack', sans-serif; /* Use local font for title */
+    font-size: 3em;
+}
+
+.faq {
+    background-color: #fff;
+    padding: 0;
+    margin: 0;
+    text-align: left;
+    max-width: 800px;
+    margin: 0 auto;
+    border-radius: 10px;
+    overflow: hidden; /* Prevents content overflow */
+}
+
+.faq .faq-item {
+    border-bottom: 1px solid #ccc;
+    opacity: 0.8;
+    padding: 10px 20px; /* Added spacing */
+}
+
+.faq .faq-item:last-child {
+    border-bottom: none;
+}
+
+.faq .question {
+    padding: 10px 20px;
+    cursor: pointer;
+    position: relative; /* For positioning the "+" */
+    display: flex; /* Align items in a row */
+    align-items: center; /* Center items vertically */
+    transition: background-color 0.3s ease;
+}
+
+.faq .question::before {
+    content: '+';
+    position: absolute;
+    left: -5px; /* Adjusted left spacing to align with text */
+    font-size: 1.5em; /* Increase font size if needed */
+    font-weight: 400; /* Make the + bold */
+    transition: transform 0.3s ease;
+    transform: rotate(0deg); /* Initial rotation */
+}
+
+.faq .question.open::before {
+    transform: rotate(45deg); /* Rotate by 45 degrees */
+}
+
+.faq .answer {
+    max-height: 0;
+    overflow: hidden;
+    padding: 0 20px;
+    transition: max-height 0.3s ease-out;
+}
+
+.faq .answer.show {
+    max-height: 200px; /* Adjust based on content height */
+}
+
+.join-waitlist p{
+    text-align: center;
+    padding: 20px;
+    font-family: 'PhanterBlack', sans-serif; /* Use local font */
+    font-size: 200%;
+}
+.footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.footer .footer-left {
+    flex: 1;
+    text-align: left;
+}
+
+.footer .footer-right {
+    flex: 1;
+    text-align: right;
+}
+
+.footer .footer-right a {
+    margin-left: 10px; /* Add spacing between links */
+}
+
+.footer a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer a:hover {
+    color: #007BFF; /* Add your preferred hover color */
+}
+
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        align-items: center;
+        padding: 0 20px;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .games {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .games img {
+        height: 40px;
+        width: auto;
+    }
+}
